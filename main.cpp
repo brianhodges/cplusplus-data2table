@@ -28,7 +28,7 @@ int main(int argc, const char * argv[]) {
     
     cout << endl;
     cout << "SANITIZED DUMP:" << endl;
-    for(int i = 0; i < sizeof(countries)/sizeof(countries[0]); i++) {
+    for (int i = 0; i < sizeof(countries)/sizeof(countries[0]); i++) {
         cout << " { :name => " << countries[i].name << ", :population => " << countries[i].population << " } " << endl;
     }
     
@@ -36,9 +36,10 @@ int main(int argc, const char * argv[]) {
     cout << "TABLE:" << endl;
     cout << header << endl;
     cout << string(header.size(), '-') << endl;
-    for(int i = 0; i < sizeof(countries)/sizeof(countries[0]); i++) {
+    for (int i = 0; i < sizeof(countries)/sizeof(countries[0]); i++) {
         int ws = field.size() - countries[i].name.size();
         cout << countries[i].name << string(ws, ' ') << "|" << countries[i].population << endl;
     }
     cout << endl;
+    return 0;
 }
